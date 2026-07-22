@@ -1,4 +1,4 @@
-#ASL Recognition System
+##ASL Recognition System
 
 A Deep Learning based American Sign Language (ASL) Recognition System that classifies hand gesture images into ASL alphabet letters (A-Z) using a 4-layer Neural Network. The project is developed using Python and deployed as an interactive web application with Streamlit.
 
