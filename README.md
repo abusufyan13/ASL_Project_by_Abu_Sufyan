@@ -81,14 +81,3 @@ License
 
 This project is licensed under the MIT License. You are free to use, modify, and distribute this project with proper attribution.
 
-│
-├── app.py                  # Streamlit application
-├── classes.json            # Class labels mapping
-├── requirements.txt        # Required Python libraries
-├── image.png               # Project image/sample image
-│
-├── ASL_weight files        # Trained model weights
-│
-├── README.md               # Project documentation
-└── LICENSE                 # MIT License
-#Installation and Setup
