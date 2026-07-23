@@ -40,16 +40,16 @@ st.markdown("""
 <style>
     /* Global styles */
     .stApp {
-        background: linear-gradient(135deg, #0B1E3D 0%, #1a3a5c 100%);
+        background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
     }
     
     /* Main container */
     .main {
-        background: rgba(11, 30, 61, 0.85);
+        background: rgba(15, 23, 42, 0.85);
         backdrop-filter: blur(10px);
         padding: 2rem;
         border-radius: 24px;
-        border: 1px solid rgba(0, 217, 233, 0.2);
+        border: 1px solid rgba(56, 189, 248, 0.2);
         box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
         margin: 1rem;
         animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1);
@@ -141,7 +141,7 @@ st.markdown("""
     .title-container {
         text-align: center;
         padding: 20px 0 15px 0;
-        border-bottom: 2px solid rgba(0, 217, 233, 0.15);
+        border-bottom: 2px solid rgba(56, 189, 248, 0.15);
         margin-bottom: 30px;
         position: relative;
         animation: fadeInDown 0.8s cubic-bezier(0.16, 1, 0.3, 1);
@@ -155,7 +155,7 @@ st.markdown("""
         transform: translateX(-50%);
         width: 100px;
         height: 3px;
-        background: linear-gradient(90deg, #00D9E9, #FFB000);
+        background: linear-gradient(90deg, #38BDF8, #FBBF24);
         border-radius: 3px;
         animation: expandWidth 1s cubic-bezier(0.16, 1, 0.3, 1);
     }
@@ -171,16 +171,11 @@ st.markdown("""
         font-weight: 900;
         letter-spacing: -1px;
         margin: 0;
-        text-shadow: 0 2px 10px rgba(0, 217, 233, 0.2);
+        text-shadow: 0 2px 10px rgba(56, 189, 248, 0.2);
     }
     
     .main-title .highlight {
-        background: linear-gradient(135deg, #FFB000, #FF6B00);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        animation: gradientShift 3s ease-in-out infinite;
-        background-size: 200% 200%;
+        color: #FBBF24;
     }
     
     @keyframes gradientShift {
@@ -189,7 +184,7 @@ st.markdown("""
     }
     
     .sub-title {
-        color: #BcD6E6;
+        color: #CBD5E1;
         font-size: 16px;
         font-weight: 400;
         letter-spacing: 4px;
@@ -223,7 +218,7 @@ st.markdown("""
         left: -5px;
         right: -5px;
         bottom: -5px;
-        background: linear-gradient(135deg, #00D9E9, #FFB000, #00D9E9);
+        background: linear-gradient(135deg, #38BDF8, #FBBF24, #38BDF8);
         border-radius: 16px;
         opacity: 0;
         transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
@@ -244,7 +239,7 @@ st.markdown("""
         max-width: 150px;
         height: auto;
         border-radius: 12px;
-        border: 2px solid rgba(0, 217, 233, 0.3);
+        border: 2px solid rgba(56, 189, 248, 0.3);
         padding: 8px;
         background: rgba(255, 255, 255, 0.08);
         transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
@@ -254,8 +249,8 @@ st.markdown("""
     }
     
     .sidebar-logo:hover {
-        border-color: rgba(0, 217, 233, 0.8);
-        box-shadow: 0 8px 30px rgba(0, 217, 233, 0.3);
+        border-color: rgba(56, 189, 248, 0.8);
+        box-shadow: 0 8px 30px rgba(56, 189, 248, 0.3);
         transform: scale(1.02);
     }
     
@@ -269,7 +264,7 @@ st.markdown("""
     }
     
     .custom-upload-btn {
-        background: linear-gradient(135deg, #00D9E9, #0099a8);
+        background: linear-gradient(135deg, #38BDF8, #0284C7);
         color: white;
         padding: 14px 30px;
         border: none;
@@ -281,7 +276,7 @@ st.markdown("""
         display: inline-flex;
         align-items: center;
         gap: 10px;
-        box-shadow: 0 4px 15px rgba(0, 217, 233, 0.3);
+        box-shadow: 0 4px 15px rgba(56, 189, 248, 0.3);
         letter-spacing: 0.5px;
         position: relative;
         overflow: hidden;
@@ -304,8 +299,8 @@ st.markdown("""
     
     .custom-upload-btn:hover {
         transform: translateY(-3px) scale(1.02);
-        box-shadow: 0 8px 30px rgba(0, 217, 233, 0.5);
-        background: linear-gradient(135deg, #00e5f5, #00a8b8);
+        box-shadow: 0 8px 30px rgba(56, 189, 248, 0.5);
+        background: linear-gradient(135deg, #7DD3FC, #0EA5E9);
     }
     
     .custom-upload-btn:active {
@@ -326,7 +321,7 @@ st.markdown("""
         background: rgba(255, 255, 255, 0.05);
         border-radius: 20px;
         padding: 20px;
-        border: 1px solid rgba(0, 217, 233, 0.2);
+        border: 1px solid rgba(56, 189, 248, 0.2);
         margin: 20px 0;
         transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
         position: relative;
@@ -341,7 +336,7 @@ st.markdown("""
         left: -50%;
         width: 200%;
         height: 200%;
-        background: radial-gradient(circle, rgba(0, 217, 233, 0.05) 0%, transparent 70%);
+        background: radial-gradient(circle, rgba(56, 189, 248, 0.05) 0%, transparent 70%);
         animation: rotate 20s linear infinite;
     }
     
@@ -352,8 +347,8 @@ st.markdown("""
     
     .image-container:hover {
         transform: scale(1.02);
-        border-color: rgba(0, 217, 233, 0.4);
-        box-shadow: 0 8px 30px rgba(0, 217, 233, 0.1);
+        border-color: rgba(56, 189, 248, 0.4);
+        box-shadow: 0 8px 30px rgba(56, 189, 248, 0.1);
     }
     
     .image-container img {
@@ -369,7 +364,7 @@ st.markdown("""
         border-radius: 20px;
         padding: 24px;
         margin: 12px 0;
-        border-left: 4px solid #00D9E9;
+        border-left: 4px solid #38BDF8;
         transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
         position: relative;
         overflow: hidden;
@@ -387,7 +382,7 @@ st.markdown("""
         left: 0;
         right: 0;
         bottom: 0;
-        background: linear-gradient(135deg, rgba(0, 217, 233, 0.05), transparent);
+        background: linear-gradient(135deg, rgba(56, 189, 248, 0.05), transparent);
         opacity: 0;
         transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1);
     }
@@ -403,7 +398,7 @@ st.markdown("""
     }
     
     .result-label {
-        color: #BcD6E6;
+        color: #CBD5E1;
         font-size: 13px;
         font-weight: 600;
         letter-spacing: 1.5px;
@@ -422,10 +417,7 @@ st.markdown("""
     }
     
     .result-value .highlight {
-        background: linear-gradient(135deg, #FFB000, #FF6B00);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
+        color: #FBBF24;
     }
     
     .confidence-bar {
@@ -439,7 +431,7 @@ st.markdown("""
     }
     
     .confidence-fill {
-        background: linear-gradient(90deg, #00D9E9, #FFB000);
+        background: linear-gradient(90deg, #38BDF8, #FBBF24);
         height: 100%;
         border-radius: 12px;
         transition: width 1.5s cubic-bezier(0.16, 1, 0.3, 1);
@@ -468,24 +460,21 @@ st.markdown("""
     .footer {
         margin-top: 40px;
         padding-top: 20px;
-        border-top: 2px solid rgba(0, 217, 233, 0.1);
+        border-top: 2px solid rgba(56, 189, 248, 0.1);
         text-align: center;
-        color: #5f8aa7;
+        color: #94A3B8;
         font-size: 13px;
         letter-spacing: 1px;
         animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1);
     }
     
     .footer .dot {
-        color: #00D9E9;
+        color: #38BDF8;
         margin: 0 8px;
     }
     
     .footer .year {
-        background: linear-gradient(135deg, #FFB000, #FF6B00);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
+        color: #FBBF24;
         font-weight: 700;
     }
     
@@ -495,7 +484,7 @@ st.markdown("""
         border-radius: 16px;
         padding: 16px;
         margin: 12px 0;
-        border: 1px solid rgba(0, 217, 233, 0.1);
+        border: 1px solid rgba(56, 189, 248, 0.1);
         transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
         animation: fadeInLeft 0.6s cubic-bezier(0.16, 1, 0.3, 1);
         position: relative;
@@ -509,10 +498,10 @@ st.markdown("""
     .sidebar-section:nth-child(6) { animation-delay: 0.25s; }
     
     .sidebar-section:hover {
-        border-color: rgba(0, 217, 233, 0.3);
+        border-color: rgba(56, 189, 248, 0.3);
         background: rgba(255, 255, 255, 0.08);
         transform: translateX(6px) scale(1.02);
-        box-shadow: 0 4px 20px rgba(0, 217, 233, 0.1);
+        box-shadow: 0 4px 20px rgba(56, 189, 248, 0.1);
     }
     
     .sidebar-section::before {
@@ -522,7 +511,7 @@ st.markdown("""
         left: 0;
         width: 3px;
         height: 100%;
-        background: linear-gradient(180deg, #00D9E9, #FFB000);
+        background: linear-gradient(180deg, #38BDF8, #FBBF24);
         opacity: 0;
         transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1);
     }
@@ -532,7 +521,7 @@ st.markdown("""
     }
     
     .sidebar-section h4 {
-        color: #00D9E9;
+        color: #38BDF8;
         font-size: 14px;
         font-weight: 700;
         letter-spacing: 1px;
@@ -541,7 +530,7 @@ st.markdown("""
     }
     
     .sidebar-section p {
-        color: #BcD6E6;
+        color: #CBD5E1;
         font-size: 13px;
         line-height: 1.6;
         margin: 4px 0;
@@ -550,8 +539,8 @@ st.markdown("""
     
     .sidebar-section .badge {
         display: inline-block;
-        background: rgba(0, 217, 233, 0.15);
-        color: #00D9E9;
+        background: rgba(56, 189, 248, 0.15);
+        color: #38BDF8;
         padding: 4px 12px;
         border-radius: 20px;
         font-size: 11px;
@@ -562,12 +551,12 @@ st.markdown("""
     }
     
     .sidebar-section .badge:hover {
-        background: rgba(0, 217, 233, 0.3);
+        background: rgba(56, 189, 248, 0.3);
         transform: scale(1.08) rotate(-2deg);
     }
     
     .sidebar-section .highlight-text {
-        color: #FFB000;
+        color: #FBBF24;
         font-weight: 600;
     }
     
@@ -592,7 +581,7 @@ st.markdown("""
     
     .member-item:hover {
         background: rgba(255, 255, 255, 0.08);
-        border-color: rgba(0, 217, 233, 0.2);
+        border-color: rgba(56, 189, 248, 0.2);
         transform: translateX(6px) scale(1.02);
     }
     
@@ -600,7 +589,7 @@ st.markdown("""
         font-size: 16px;
         width: 25px;
         text-align: center;
-        color: #00D9E9;
+        color: #38BDF8;
         animation: pulse 2s ease-in-out infinite;
     }
     
@@ -612,11 +601,11 @@ st.markdown("""
     
     /* Quote styling */
     .quote-container {
-        background: linear-gradient(135deg, rgba(255, 176, 0, 0.1), rgba(0, 217, 233, 0.1));
+        background: linear-gradient(135deg, rgba(251, 191, 36, 0.1), rgba(56, 189, 248, 0.1));
         border-radius: 16px;
         padding: 20px;
         margin: 12px 0;
-        border: 1px solid rgba(255, 176, 0, 0.2);
+        border: 1px solid rgba(251, 191, 36, 0.2);
         position: relative;
         animation: rotateIn 0.8s cubic-bezier(0.16, 1, 0.3, 1);
         transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
@@ -624,13 +613,13 @@ st.markdown("""
     
     .quote-container:hover {
         transform: scale(1.03) rotate(-1deg);
-        box-shadow: 0 8px 30px rgba(255, 176, 0, 0.15);
+        box-shadow: 0 8px 30px rgba(251, 191, 36, 0.15);
     }
     
     .quote-container::before {
         content: '"';
         font-size: 60px;
-        color: rgba(255, 176, 0, 0.2);
+        color: rgba(251, 191, 36, 0.2);
         position: absolute;
         top: -10px;
         left: 10px;
@@ -657,7 +646,7 @@ st.markdown("""
     }
     
     .quote-author {
-        color: #FFB000;
+        color: #FBBF24;
         font-size: 13px;
         font-weight: 600;
         text-align: right;
@@ -668,14 +657,14 @@ st.markdown("""
     
     /* Button overrides */
     .stButton > button {
-        background: linear-gradient(135deg, #00D9E9, #0099a8);
+        background: linear-gradient(135deg, #38BDF8, #0284C7);
         color: white;
         font-weight: 700;
         border: none;
         border-radius: 14px;
         padding: 12px 35px;
         transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-        box-shadow: 0 4px 15px rgba(0, 217, 233, 0.3);
+        box-shadow: 0 4px 15px rgba(56, 189, 248, 0.3);
         width: 100%;
         font-size: 16px;
         position: relative;
@@ -698,9 +687,9 @@ st.markdown("""
     }
     
     .stButton > button:hover {
-        background: linear-gradient(135deg, #FFB000, #FF6B00);
+        background: linear-gradient(135deg, #FBBF24, #F59E0B);
         transform: translateY(-3px) scale(1.02);
-        box-shadow: 0 8px 25px rgba(255, 176, 0, 0.4);
+        box-shadow: 0 8px 25px rgba(251, 191, 36, 0.4);
     }
     
     .stButton > button:disabled {
@@ -711,27 +700,27 @@ st.markdown("""
     
     /* Prediction button special styling */
     .predict-btn > button {
-        background: linear-gradient(135deg, #FFB000, #FF6B00) !important;
+        background: linear-gradient(135deg, #FBBF24, #F59E0B) !important;
         font-size: 20px !important;
         padding: 16px 40px !important;
-        box-shadow: 0 8px 30px rgba(255, 176, 0, 0.4) !important;
+        box-shadow: 0 8px 30px rgba(251, 191, 36, 0.4) !important;
         animation: pulseGlow 2s ease-in-out infinite;
     }
     
     @keyframes pulseGlow {
         0%, 100% { 
-            box-shadow: 0 8px 30px rgba(255, 176, 0, 0.4);
+            box-shadow: 0 8px 30px rgba(251, 191, 36, 0.4);
             transform: scale(1);
         }
         50% { 
-            box-shadow: 0 8px 50px rgba(255, 176, 0, 0.6);
+            box-shadow: 0 8px 50px rgba(251, 191, 36, 0.6);
             transform: scale(1.03);
         }
     }
     
     .predict-btn > button:hover {
         transform: translateY(-4px) scale(1.05) !important;
-        box-shadow: 0 12px 40px rgba(255, 176, 0, 0.6) !important;
+        box-shadow: 0 12px 40px rgba(251, 191, 36, 0.6) !important;
         animation: none;
     }
     
@@ -739,13 +728,13 @@ st.markdown("""
     .streamlit-expanderHeader {
         background: rgba(255, 255, 255, 0.05) !important;
         border-radius: 12px !important;
-        border: 1px solid rgba(0, 217, 233, 0.1) !important;
-        color: #BcD6E6 !important;
+        border: 1px solid rgba(56, 189, 248, 0.1) !important;
+        color: #CBD5E1 !important;
         transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
     }
     
     .streamlit-expanderHeader:hover {
-        border-color: rgba(0, 217, 233, 0.3) !important;
+        border-color: rgba(56, 189, 248, 0.3) !important;
         background: rgba(255, 255, 255, 0.08) !important;
         transform: translateX(6px) scale(1.02);
     }
@@ -758,7 +747,7 @@ st.markdown("""
         background: rgba(255, 255, 255, 0.05);
         padding: 6px;
         border-radius: 12px;
-        border: 1px solid rgba(0, 217, 233, 0.15);
+        border: 1px solid rgba(56, 189, 248, 0.15);
     }
     div[data-testid="stRadio"] label {
         background: transparent;
@@ -772,10 +761,10 @@ st.markdown("""
         font-weight: 600 !important;
     }
     div[data-testid="stRadio"] label:hover {
-        background: rgba(0, 217, 233, 0.1);
+        background: rgba(56, 189, 248, 0.1);
     }
     div[data-testid="stRadio"] label:has(input:checked) {
-        background: linear-gradient(135deg, #00D9E9, #0099a8);
+        background: linear-gradient(135deg, #38BDF8, #0284C7);
     }
     div[data-testid="stRadio"] label:has(input:checked) p {
         color: #FFFFFF !important;
@@ -841,11 +830,11 @@ with st.sidebar:
         # Fallback if image not found
         st.markdown("""
         <div style="text-align: center; padding: 20px 0 10px 0; animation: rotateIn 0.8s cubic-bezier(0.16, 1, 0.3, 1);">
-            <div style="font-size: 56px; color: #00D9E9; animation: float 3s ease-in-out infinite;">AI</div>
+            <div style="font-size: 56px; color: #38BDF8; animation: float 3s ease-in-out infinite;">AI</div>
             <h2 style="color: #FFFFFF; font-weight: 800; margin: 10px 0 0 0;">
-                ASL<span style="color: #FFB000;">AI</span>
+                ASL<span style="color: #FBBF24;">AI</span>
             </h2>
-            <p style="color: #5f8aa7; font-size: 12px; letter-spacing: 2px; margin-top: 4px;">
+            <p style="color: #94A3B8; font-size: 12px; letter-spacing: 2px; margin-top: 4px;">
                 v2.0 · DEEP LEARNING
             </p>
         </div>
@@ -888,11 +877,11 @@ with st.sidebar:
         <h4>Education</h4>
         <p>
             <span class="highlight-text">Abu Sufyan</span><br>
-            <span style="font-size: 12px; color: #5f8aa7;">
+            <span style="font-size: 12px; color: #94A3B8;">
                 Graduate from 
                 <span style="color: #FFFFFF;">University of Narowal</span>
             </span><br>
-            <span style="font-size: 12px; color: #5f8aa7;">
+            <span style="font-size: 12px; color: #94A3B8;">
                 Course: 
                 <span style="color: #FFFFFF;">Deep Learning</span>
             </span>
@@ -905,12 +894,12 @@ with st.sidebar:
     <div class="sidebar-section">
         <h4>Institute</h4>
         <p style="font-size: 12px; line-height: 1.8; text-align: justify;">
-            <span style="color: #00D9E9;">Abdus Salam School of</span><br>
+            <span style="color: #38BDF8;">Abdus Salam School of</span><br>
             <span style="color: #FFFFFF; font-weight: 600;">Mathematical Sciences</span><br>
-            <span style="color: #5f8aa7; font-size: 11px;">GC University Lahore</span>
+            <span style="color: #94A3B8; font-size: 11px;">GC University Lahore</span>
         </p>
         <p style="font-size: 12px; margin-top: 8px; text-align: justify;">
-            <span style="color: #00D9E9;">Instructor:</span><br>
+            <span style="color: #38BDF8;">Instructor:</span><br>
             <span style="color: #FFFFFF; font-weight: 600;">Dr. Jamshaid Warraich</span>
         </p>
     </div>
@@ -945,15 +934,15 @@ with st.sidebar:
     <div class="sidebar-section">
         <h4>Architecture</h4>
         <p style="font-family: monospace; font-size: 12px; text-align: justify;">
-            <span style="color: #00D9E9;">Input:</span> 4096 (64x64 pixels)<br>
-            <span style="color: #5f8aa7;">↓</span> ReLU<br>
-            <span style="color: #00D9E9;">Layer 1:</span> 128 neurons<br>
-            <span style="color: #5f8aa7;">↓</span> ReLU<br>
-            <span style="color: #00D9E9;">Layer 2:</span> 64 neurons<br>
-            <span style="color: #5f8aa7;">↓</span> ReLU<br>
-            <span style="color: #00D9E9;">Layer 3:</span> 32 neurons<br>
-            <span style="color: #5f8aa7;">↓</span> Softmax<br>
-            <span style="color: #00D9E9;">Output:</span> 26 classes (A-Z)
+            <span style="color: #38BDF8;">Input:</span> 4096 (64x64 pixels)<br>
+            <span style="color: #94A3B8;">↓</span> ReLU<br>
+            <span style="color: #38BDF8;">Layer 1:</span> 128 neurons<br>
+            <span style="color: #94A3B8;">↓</span> ReLU<br>
+            <span style="color: #38BDF8;">Layer 2:</span> 64 neurons<br>
+            <span style="color: #94A3B8;">↓</span> ReLU<br>
+            <span style="color: #38BDF8;">Layer 3:</span> 32 neurons<br>
+            <span style="color: #94A3B8;">↓</span> Softmax<br>
+            <span style="color: #38BDF8;">Output:</span> 26 classes (A-Z)
         </p>
         <div style="margin-top: 10px; display: flex; flex-wrap: wrap; gap: 4px;">
             <span class="badge">4 Layers</span>
@@ -998,7 +987,7 @@ with st.sidebar:
     
     # Footer in sidebar
     st.markdown("""
-    <div style="text-align: center; color: #5f8aa7; font-size: 11px; padding: 10px 0; animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1);">
+    <div style="text-align: center; color: #94A3B8; font-size: 11px; padding: 10px 0; animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1);">
         <span>Made with passion by Team ASL-AI</span><br>
         <span style="opacity: 0.6;">© 2026 ASL Recognition System</span>
         <br><br>
@@ -1111,7 +1100,7 @@ with left_col:
         <h3 style="color: #FFFFFF; font-weight: 700; margin-bottom: 10px;">
             Upload Image
         </h3>
-        <p style="color: #5f8aa7; font-size: 14px; margin-top: -5px;">
+        <p style="color: #94A3B8; font-size: 14px; margin-top: -5px;">
             Upload a clear image of an ASL hand gesture
         </p>
     </div>
@@ -1132,7 +1121,7 @@ with left_col:
         
         # Show supported formats
         st.markdown("""
-        <div style="text-align: center; color: #5f8aa7; font-size: 12px; margin-top: 10px; animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1);">
+        <div style="text-align: center; color: #94A3B8; font-size: 12px; margin-top: 10px; animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1);">
             Supported formats: JPG, JPEG, PNG · Max size: 5MB
         </div>
         """, unsafe_allow_html=True)
@@ -1223,7 +1212,7 @@ if uploaded_file:
         
         with col1:
             st.markdown(f"""
-            <div class="result-card" style="border-left-color: #FFB000;">
+            <div class="result-card" style="border-left-color: #FBBF24;">
                 <div class="result-label">Predicted Letter</div>
                 <div class="result-value">
                     <span class="highlight">{classes[predicted_class]}</span>
@@ -1233,7 +1222,7 @@ if uploaded_file:
         
         with col2:
             st.markdown(f"""
-            <div class="result-card" style="border-left-color: #00D9E9;">
+            <div class="result-card" style="border-left-color: #38BDF8;">
                 <div class="result-label">Confidence Score</div>
                 <div class="result-value">
                     {confidence*100:.1f}%
@@ -1248,7 +1237,7 @@ if uploaded_file:
         with st.expander("View Top 3 Predictions", expanded=False):
             top_indices = np.argsort(prediction.flatten())[-3:][::-1]
             rank_symbols = ["1st", "2nd", "3rd"]
-            colors = ["#FFB000", "#C0C0C0", "#CD7F32"]
+            colors = ["#FBBF24", "#C0C0C0", "#CD7F32"]
             for i, idx in enumerate(top_indices):
                 prob = prediction[idx].item() * 100
                 st.markdown(f"""
@@ -1284,9 +1273,9 @@ if uploaded_file:
 else:
     # Show placeholder when no image is uploaded
     st.markdown("""
-    <div style="text-align: center; padding: 80px 20px; color: #5f8aa7; animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1);">
-        <div style="font-size: 72px; color: #00D9E9; margin-bottom: 20px; animation: float 3s ease-in-out infinite;">↑</div>
-        <h3 style="color: #BcD6E6; font-weight: 600; margin-bottom: 10px; animation: fadeInDown 0.8s cubic-bezier(0.16, 1, 0.3, 1);">
+    <div style="text-align: center; padding: 80px 20px; color: #94A3B8; animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1);">
+        <div style="font-size: 72px; color: #38BDF8; margin-bottom: 20px; animation: float 3s ease-in-out infinite;">↑</div>
+        <h3 style="color: #CBD5E1; font-weight: 600; margin-bottom: 10px; animation: fadeInDown 0.8s cubic-bezier(0.16, 1, 0.3, 1);">
             Ready to Recognize Gestures
         </h3>
         <p style="font-size: 16px; max-width: 400px; margin: 0 auto; animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1);">
