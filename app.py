@@ -27,7 +27,7 @@ except:
 
 st.set_page_config(
     page_title="ASL Recognition System",
-    page_icon="",  # Fallback icon
+    page_icon="🧠",  # Fallback icon
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -762,17 +762,23 @@ st.markdown("""
     }
     div[data-testid="stRadio"] label {
         background: transparent;
-        color: #BcD6E6 !important;
         padding: 8px 20px;
         border-radius: 8px;
         transition: all 0.3s ease;
         cursor: pointer;
     }
+    div[data-testid="stRadio"] label p {
+        color: #FFFFFF !important;
+        font-weight: 600 !important;
+    }
     div[data-testid="stRadio"] label:hover {
         background: rgba(0, 217, 233, 0.1);
     }
-    div[data-testid="stRadio"] input:checked + div {
-        color: #0B1E3D !important;
+    div[data-testid="stRadio"] label:has(input:checked) {
+        background: linear-gradient(135deg, #00D9E9, #0099a8);
+    }
+    div[data-testid="stRadio"] label:has(input:checked) p {
+        color: #FFFFFF !important;
     }
 
     /* Hide default Streamlit elements */
@@ -879,7 +885,7 @@ with st.sidebar:
     # Developer Information
     st.markdown("""
     <div class="sidebar-section">
-        <h4>Developed By</h4>
+        <h4>Education</h4>
         <p>
             <span class="highlight-text">Abu Sufyan</span><br>
             <span style="font-size: 12px; color: #5f8aa7;">
