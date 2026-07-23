@@ -27,7 +27,7 @@ except:
 
 st.set_page_config(
     page_title="ASL Recognition System",
-    page_icon="🧠",  # Fallback icon
+    page_icon="",  # Fallback icon
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -315,11 +315,6 @@ st.markdown("""
     .custom-upload-btn .btn-icon {
         font-size: 20px;
         animation: float 3s ease-in-out infinite;
-    }
-    
-    /* Hide default file uploader */
-    .stFileUploader > div:first-child {
-        display: none !important;
     }
     
     .stFileUploader {
@@ -755,10 +750,43 @@ st.markdown("""
         transform: translateX(6px) scale(1.02);
     }
     
+    /* Upload/Camera mode toggle */
+    div[data-testid="stRadio"] > div {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        background: rgba(255, 255, 255, 0.05);
+        padding: 6px;
+        border-radius: 12px;
+        border: 1px solid rgba(0, 217, 233, 0.15);
+    }
+    div[data-testid="stRadio"] label {
+        background: transparent;
+        color: #BcD6E6 !important;
+        padding: 8px 20px;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+    div[data-testid="stRadio"] label:hover {
+        background: rgba(0, 217, 233, 0.1);
+    }
+    div[data-testid="stRadio"] input:checked + div {
+        color: #0B1E3D !important;
+    }
+
     /* Hide default Streamlit elements */
     #MainMenu {visibility: hidden;}
     footer {visibility: hidden;}
-    header {visibility: hidden;}
+    header {visibility: visible; background: transparent !important; box-shadow: none !important;}
+    header [data-testid="stToolbar"] { visibility: hidden; }
+    header [data-testid="collapsedControl"] { display: none !important; }
+    section[data-testid="stSidebar"] {
+        min-width: 300px !important;
+        max-width: 300px !important;
+        transform: none !important;
+        visibility: visible !important;
+    }
     
     /* Responsive */
     @media (max-width: 768px) {
@@ -851,7 +879,7 @@ with st.sidebar:
     # Developer Information
     st.markdown("""
     <div class="sidebar-section">
-        <h4>Education</h4>
+        <h4>Developed By</h4>
         <p>
             <span class="highlight-text">Abu Sufyan</span><br>
             <span style="font-size: 12px; color: #5f8aa7;">
@@ -1048,16 +1076,6 @@ def custom_file_uploader():
         key="file_uploader"
     )
     
-    # Custom styled upload button
-    st.markdown("""
-    <div class="upload-container">
-        <label for="file_uploader" class="custom-upload-btn">
-            <span class="btn-icon">📁</span>
-            Browse & Select Image
-        </label>
-    </div>
-    """, unsafe_allow_html=True)
-    
     return uploaded_file
 
 # ===============================
@@ -1093,15 +1111,32 @@ with left_col:
     </div>
     """, unsafe_allow_html=True)
     
-    # Custom upload button
-    uploaded_file = custom_file_uploader()
+    # Mode selector: Upload or Camera
+    input_mode = st.radio(
+        "Input source",
+        ["Upload", "Camera"],
+        horizontal=True,
+        label_visibility="collapsed",
+        key="input_mode"
+    )
     
-    # Show supported formats
-    st.markdown("""
-    <div style="text-align: center; color: #5f8aa7; font-size: 12px; margin-top: 10px; animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1);">
-        Supported formats: JPG, JPEG, PNG · Max size: 5MB
-    </div>
-    """, unsafe_allow_html=True)
+    if input_mode == "Upload":
+        # Custom upload button
+        uploaded_file = custom_file_uploader()
+        
+        # Show supported formats
+        st.markdown("""
+        <div style="text-align: center; color: #5f8aa7; font-size: 12px; margin-top: 10px; animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1);">
+            Supported formats: JPG, JPEG, PNG · Max size: 5MB
+        </div>
+        """, unsafe_allow_html=True)
+    else:
+        # Live camera capture
+        uploaded_file = st.camera_input(
+            "Take a photo",
+            label_visibility="collapsed",
+            key="camera_input"
+        )
 
 with right_col:
     # Display uploaded image
@@ -1116,7 +1151,8 @@ with right_col:
         """, unsafe_allow_html=True)
         
         st.markdown('<div class="image-container">', unsafe_allow_html=True)
-        st.image(image, caption="Uploaded Gesture", use_container_width=True)
+        caption_text = "Captured Gesture" if input_mode == "Camera" else "Uploaded Gesture"
+        st.image(image, caption=caption_text, use_container_width=True)
         st.markdown('</div>', unsafe_allow_html=True)
 
 # If image is uploaded, show prediction button
